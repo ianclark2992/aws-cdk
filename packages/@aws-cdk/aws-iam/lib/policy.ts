@@ -168,10 +168,7 @@ export class Policy extends Resource implements IPolicy {
       result.push('Policy is empty. You must add statements to the policy');
     }
 
-    // validate that the policy is attached to at least one principal (role, user or group).
-    if (this.groups.length + this.users.length + this.roles.length === 0) {
-      result.push(`Policy must be attached to at least one principal: user, group or role`);
-    }
+
 
     return result;
   }
